@@ -12,8 +12,6 @@ func _make_map():
 		for y in range (0, map_size.y):
 			var temp = tile.instance()
 			temp.global_position = Vector2(initial_position.x + x*16 , initial_position.y + y*16)
-			if(x == 0 && y == 0):
-				print(temp.global_position)
 			add_child(temp)
 
 func _get_initial_position():

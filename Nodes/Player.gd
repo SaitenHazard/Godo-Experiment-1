@@ -7,11 +7,9 @@ var size
 func _ready():
 	initial_position = get_parent().get_node("GameManager")._get_initial_position();
 	size = get_parent().get_node("GameManager")._get_map_size();
-	print(initial_position)
 
 func _process(delta):
 	_controls()
-	print(coordinates)
 	global_position = Vector2(initial_position.x + 16*coordinates.x, initial_position.y + 16*coordinates.y)
 
 func _controls():
